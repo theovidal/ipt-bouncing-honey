@@ -1,1 +1,13 @@
+# IDEs
+.idea
+.vscode
+
+# Files that are too large
+
+# Data from experiments
 data
+results
+plots
+
+# Other programs
+dropfit
