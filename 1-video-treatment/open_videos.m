@@ -30,8 +30,8 @@ function open_videos(params)
         num_frames = floor(v.FrameRate*v.Duration)-10;
         
         info_file = fopen(fullfile(params.results_folder, sprintf('%s.csv', name)), 'w');
-        fprintf(info_file, 'name,num_frames,framerate,duration,width,height,temperature,beginning,comments\n');
-        fprintf(info_file, sprintf('%s,%d,%d,%.2f,%d,%d,,,\n', name, num_frames, v.FrameRate, v.Duration, v.Width, v.Height));
+        fprintf(info_file, 'name,num_frames,framerate,duration,width,height,temperature,rate,beginning,oscillations_beginning,comments\n');
+        fprintf(info_file, sprintf('%s,%d,%d,%.2f,%d,%d,,,,,\n', name, num_frames, v.FrameRate, v.Duration, v.Width, v.Height));
         fclose(info_file);
         
         params.video_end = v.Duration;
